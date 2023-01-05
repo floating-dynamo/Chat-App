@@ -19,7 +19,7 @@ const server = http.createServer(app);
 const io = new socketio.Server(server);
 
 const pubDirectory = path.join(__dirname, "../public");
-const port = 3000 || process.env.PORT;
+const port = process.env.PORT || 3000;
 
 // Setting the static public directory
 app.use(express.static(pubDirectory));
