@@ -100,6 +100,7 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(port, () => {
+server.listen(port, (err) => {
+  if (err) throw err;
   console.log(`Server started at port: ${port}`);
 });
